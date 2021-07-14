@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PhotoGallery from './PhotoGallery'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const photos = [
+        ["http://placeimg.com/126/54/people", "people"],
+        ["http://placeimg.com/126/54/animals", "animals"],
+        ["http://placeimg.com/126/54/tech", "tech"],
+        ["http://placeimg.com/126/54/nature", "nature"],
+        ["http://placeimg.com/126/54/arch", "architecture"],
+        ["http://placeimg.com/126/54/any", "any"]
+    ]
+
+    return (
+        <div>
+            <h1>Galeria de fotos</h1>
+            <PhotoGallery photos={photos}/>
+        </div>
+    )
 }
 
 export default App;
