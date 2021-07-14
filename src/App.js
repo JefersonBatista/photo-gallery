@@ -1,18 +1,19 @@
 import React from 'react'
 import PhotoGallery from './PhotoGallery'
+import './App.css'
 
 function App() {
     const photos = [
-        ["http://placeimg.com/126/54/people", "people"],
-        ["http://placeimg.com/126/54/animals", "animals"],
-        ["http://placeimg.com/126/54/tech", "tech"],
-        ["http://placeimg.com/126/54/nature", "nature"],
-        ["http://placeimg.com/126/54/arch", "architecture"],
-        ["http://placeimg.com/126/54/any", "any"]
+        ["http://placeimg.com/300/200/people", "pessoas"],
+        ["http://placeimg.com/300/200/animals", "animais"],
+        ["http://placeimg.com/300/200/tech", "tecnologia"],
+        ["http://placeimg.com/300/200/nature", "natureza"],
+        ["http://placeimg.com/300/200/arch", "arquitetura"],
+        ["http://placeimg.com/300/200/any", "aleatório"]
     ]
 
     return (
-        <div>
+        <div className="App">
             <h1>Galeria de fotos</h1>
             <PhotoGallery photos={photos}/>
         </div>

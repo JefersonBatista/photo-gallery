@@ -41,8 +41,11 @@ function PhotoGallery(props) {
         return (
             <div>
                 <img src={img} alt="Imagem não existe." />
+                <br />
+                <label>{tag}</label>
+                <br />
                 <Button onClick={() => handleRemove(tag)}>
-                    Remover {tag}
+                    Remover
                 </Button>
             </div>
         )
@@ -51,11 +54,15 @@ function PhotoGallery(props) {
     return (
         <div>
             <Button onClick={handleRestore}>Restaurar imagens</Button>
+            <br /><br />
             <div>
                 <label>Filtrar por tag: </label>
                 <input ref={filterRef} type="text" onChange={handleFilter} />
             </div>
-            {filteredGallery.map(renderPhoto)}
+            <br />
+            <div className="Photos">
+                {filteredGallery.map(renderPhoto)}
+            </div>
         </div>
     )
 }
